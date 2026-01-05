@@ -1,0 +1,400 @@
+.book-details-page {
+  background-color: #ffffff;
+  min-height: 100vh;
+}
+
+.details-container {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  gap: 40px;
+  padding: 30px 20px;
+  /* Quan trọng: container phải có align-items: flex-start */
+  align-items: flex-start; 
+}
+
+/* CỘT TRÁI - HIỆU ỨNG STICKY */
+.details-left-col {
+  width: 150px; /* Độ rộng ảnh bìa */
+  flex-shrink: 0;
+}
+
+.sticky-wrapper {
+  position: -webkit-sticky; /* Hỗ trợ Safari */
+  position: sticky;
+  top: 80px; /* Khoảng cách từ đỉnh trang xuống (sau khi trừ đi chiều cao Header) */
+}
+
+.main-book-cover {
+  width: 150px;
+  height: auto;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  margin-bottom: 20px;
+}
+
+.btn-wtr-full {
+  width: 100%;
+  background-color: #409d69;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-weight: 800;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.rate-this-box {
+  text-align: center;
+  font-size: 20px;
+  color: #999;
+}
+
+.stars-outline {
+  font-size: 36px;
+  color: #ccc;
+  margin-top: 5px;
+}
+
+/* CỘT PHẢI - NỘI DUNG CHI TIẾT */
+.details-right-col {
+  flex: 1;
+}
+
+.book-title-display {
+  font-family: "Merriweather", serif;
+  font-size: 32px;
+  font-weight: 800;
+  color: #333;
+  line-height: 1.2;
+}
+
+.book-author-display {
+  font-size: 18px;
+  margin: 10px 0 20px 0;
+}
+
+.author-name {
+  color: #00635d;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.rating-summary-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #767676;
+}
+
+.stars-fill { color: #dcb14a; font-size: 16px; }
+.avg-rating-bold { font-weight: 800; color: #333; }
+.dot-sep { color: #ccc; }
+
+.book-description-section {
+  margin-top: 30px;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.book-metadata-grid {
+  margin-top: 25px;
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.meta-item {
+  margin-bottom: 8px;
+  display: flex;
+  gap: 10px;
+}
+
+.meta-label { font-weight: 800; width: 80px; color: #767676; font-size: 13px; }
+.meta-value { color: #333; font-size: 13px; }
+
+.section-divider { border: 0; border-top: 1px solid #ebebeb; margin: 40px 0; }
+
+.sub-header { font-size: 13px; font-weight: 800; color: #382110; margin-bottom: 20px; }
+
+.book-details-table {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.detail-row {
+  display: flex;
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+.detail-label {
+  width: 120px; /* Độ rộng cố định để nhãn thẳng hàng */
+  color: #767676;
+  flex-shrink: 0;
+}
+
+.detail-value {
+  color: #333;
+}
+
+/* PHẦN GENRES */
+.book-genres-row {
+  margin-top: 20px;
+  display: flex;
+  font-size: 13px;
+  gap: 10px;
+}
+
+.genre-tags {
+  color: #00635d;
+  font-weight: 600;
+}
+
+.genre-tags span {
+  cursor: pointer;
+}
+
+.genre-tags span:hover {
+  text-decoration: underline;
+}
+
+/* Tinh chỉnh lại phần mô tả cho thoáng */
+.description-text {
+  margin-bottom: 20px;
+  font-family: "Merriweather", serif;
+  line-height: 1.7;
+  color: #181818;
+}
+
+/* SECTION TÁC GIẢ */
+.about-author-section {
+  padding: 20px 0;
+}
+
+.author-profile-box {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-top: 15px;
+}
+
+.author-large-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%; /* Ảnh tròn */
+  object-fit: cover;
+  border: 1px solid #eee;
+  flex-shrink: 0;
+}
+
+.author-info-main {
+  flex: 1;
+}
+
+.author-name-row {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+  margin-bottom: 8px;
+}
+
+.author-full-name {
+  font-size: 18px;
+  font-weight: 800;
+  color: #333;
+}
+
+.follower-count {
+  font-size: 13px;
+  color: #767676;
+}
+
+.btn-follow-author {
+  background-color: #f4f1ea;
+  border: 1px solid #d6d0c4;
+  padding: 5px 15px;
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: background 0.2s;
+}
+
+.btn-follow-author:hover {
+  background-color: #ede9de;
+}
+
+.author-bio-text {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333;
+  margin-top: 5px;
+}
+
+/* Đảm bảo divider mờ và mảnh */
+.section-divider {
+  border: 0;
+  border-top: 1px solid #ebebeb;
+  margin: 30px 0;
+}
+
+/* RATINGS & REVIEWS SECTION */
+.ratings-reviews-section {
+  padding: 10px 0;
+}
+
+.rating-distribution-container {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.rating-big-number {
+  text-align: center;
+}
+
+.rating-big-number h2 {
+  font-size: 48px;
+  color: #333;
+  margin: 0;
+}
+
+.stars-gold-large {
+  color: #dcb14a;
+  font-size: 20px;
+  margin: 5px 0;
+}
+
+.rating-big-number p {
+  font-size: 12px;
+  color: #767676;
+}
+
+/* THANH BIỂU ĐỒ (BARS) */
+.rating-bars-list {
+  flex: 1;
+}
+
+.bar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 4px;
+}
+
+.star-label {
+  font-size: 12px;
+  color: #00635d;
+  width: 40px;
+  text-align: right;
+}
+
+.bar-bg-grey {
+  flex: 1;
+  height: 8px;
+  background-color: #eee;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bar-fill-orange {
+  height: 100%;
+  background-color: #f15b5b; /* Màu cam đỏ đặc trưng của Goodreads */
+}
+
+.bar-count {
+  font-size: 12px;
+  color: #999;
+  width: 70px;
+}
+
+/* PHẦN USER WRITE REVIEW */
+.my-review-status {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  align-items: center;
+}
+
+.user-avatar-placeholder {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ddd;
+}
+
+.review-prompt p {
+  font-size: 14px;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.stars-outline-big {
+  font-size: 24px;
+  color: #ccc;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.btn-write-review {
+  background-color: #409d69;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  border-radius: 3px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.btn-write-review:hover {
+  background-color: #368559;
+}
+
+/* REVIEWS */
+.review-item {
+  padding: 20px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #333;
+}
+
+.user-avatar-mini {
+  width: 30px; height: 30px; border-radius: 50%;
+}
+
+.review-content {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.review-footer {
+  margin-top: 10px;
+  font-size: 12px;
+  color: #999;
+}
+
+.like-link {
+  margin-left: 15px;
+  color: #00635d;
+  font-weight: 700;
+  cursor: pointer;
+}

@@ -1,8 +1,15 @@
 import React from "react";
 import Header from "../components/Header";
+import { useNavigate } from "react-router-dom";
 import "../styles/Home.css";
+import Footer from "../components/Footer";
 
 export default function Home() {
+  const navigate = useNavigate();
+
+  const goToDetails = () => {
+    navigate("/bookdetails");
+  };
   return (
     <div className="home-screen">
       <Header />
@@ -12,9 +19,9 @@ export default function Home() {
           <section className="home-card-section">
             <h2 className="home-card-title">CURRENTLY READING</h2>
             <div className="current-reading-item">
-              <img src="/covers/cover5.jpg" alt="Book" className="book-cover-shadow" />
+              <img src="/covers/cover5.jpg" alt="Book" className="book-cover-shadow" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }} />
               <div className="book-info-right">
-                <p className="book-name-link">The Great Gatsby</p>
+                <p className="book-name-link" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }}>The Great Gatsby</p>
                 <p className="author-name-sub">by F. Scott Fitzgerald</p>
                 
                 <button className="btn-update-small">Update progress</button>
@@ -49,12 +56,12 @@ export default function Home() {
               <p className="activity-text">
                 <span className="user-name">A </span> 
                 has read
-                <span className="book-name-link"> Book1</span>
+                <span className="book-name-link" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }}> Book1</span>
               </p>
             </div>
             <div className="activity-container-flex">
               <div className="activity-book-cover-col">
-                <img src="/covers/cover1.jpg" alt="Book Cover" className="feed-book-cover" />
+                <img src="/covers/cover1.jpg" alt="Book Cover" className="feed-book-cover" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }} />
               </div>
               <div className="activity-info-col">
                 <div className="book-rating-row">
@@ -81,12 +88,12 @@ export default function Home() {
               <p className="activity-text">
                 <span className="user-name">B </span> 
                 want to read 
-                <span className="book-name-link"> Book2</span>
+                <span className="book-name-link" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }}> Book2</span>
               </p>
             </div>
             <div className="activity-container-flex">
               <div className="activity-book-cover-col">
-                <img src="/covers/cover2.jpg" alt="Book Cover" className="feed-book-cover" />
+                <img src="/covers/cover2.jpg" alt="Book Cover" className="feed-book-cover" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }} />
               </div>
               <div className="activity-info-col">
                 <div className="book-rating-row">
@@ -114,12 +121,12 @@ export default function Home() {
               <p className="activity-text">
                 <span className="user-name">C </span> 
                 has read 
-                <span className="book-name-link"> Book3</span>
+                <span className="book-name-link" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }}> Book3</span>
               </p>
             </div>
             <div className="activity-container-flex">
               <div className="activity-book-cover-col">
-                <img src="/covers/cover3.jpg" alt="Book Cover" className="feed-book-cover" />
+                <img src="/covers/cover3.jpg" alt="Book Cover" className="feed-book-cover" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }} />
               </div>
               <div className="activity-info-col">
                 <div className="book-rating-row">
@@ -147,12 +154,12 @@ export default function Home() {
               <p className="activity-text">
                 <span className="user-name">D </span> 
                 want to read 
-                <span className="book-name-link"> Book4</span>
+                <span className="book-name-link" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }}> Book4</span>
               </p>
             </div>
             <div className="activity-container-flex">
               <div className="activity-book-cover-col">
-                <img src="/covers/cover4.jpg" alt="Book Cover" className="feed-book-cover" />
+                <img src="/covers/cover4.jpg" alt="Book Cover" className="feed-book-cover" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }} />
               </div>
               <div className="activity-info-col">
                 <div className="book-rating-row">
@@ -179,17 +186,17 @@ export default function Home() {
           <div className="card-box">
             <h3 className="card-title">RECOMMENDATIONS</h3>
             <div className="rec-item">
-              <img src="/covers/cover5.jpg" alt="Rec" className="rec-img" />
+              <img src="/covers/cover5.jpg" alt="Rec" className="rec-img" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }} />
               <div className="rec-info">
-                <p className="rec-book-name">Atomic Habits</p>
+                <p className="rec-book-name" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }}>Atomic Habits</p>
                 <p className="rec-author">James Clear</p>
                 <button className="btn-wtr-small">Want to Read</button>
               </div>
             </div>
             <div className="rec-item">
-              <img src="/covers/cover5.jpg" alt="Rec" className="rec-img" />
+              <img src="/covers/cover5.jpg" alt="Rec" className="rec-img" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }} />
               <div className="rec-info">
-                <p className="rec-book-name">Deep Work</p>
+                <p className="rec-book-name" onClick={() => navigate("/bookdetails")} style={{ cursor: 'pointer' }}>Deep Work</p>
                 <p className="rec-author">Cal Newport</p>
                 <button className="btn-wtr-small">Want to Read</button>
               </div>
@@ -204,6 +211,7 @@ export default function Home() {
           </div>
         </aside>
       </div>
+      <Footer />
     </div>
   );
 }

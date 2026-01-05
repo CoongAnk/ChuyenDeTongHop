@@ -6,6 +6,7 @@ import GenreSelection from "./pages/GenreSelection";
 import Home from "./pages/Home";
 import GenreFantasy from "./pages/GenreFantasy";
 import SearchPage from "./pages/SearchPage"; 
+import BookDetails from "./pages/BookDetails";
 
 
 export default function App() {
@@ -18,6 +19,7 @@ export default function App() {
       <Route path="/home" element={<Home />} />
       <Route path="/genrefantasy" element={<GenreFantasy />} />
       <Route path="/searchpage" element={<SearchPage />} /> 
+      <Route path="/bookdetails" element={<BookDetails />} />
     </Routes>
   );
 }

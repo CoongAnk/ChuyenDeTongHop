@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../components/Header";
 import "../styles/GenreFantasy.css";
+import Footer from "../components/Footer";
 
 const BOOK_COVERS = [
   { id: 1, cover: "/fantasys/F01.jpg" },
@@ -50,6 +51,7 @@ export default function GenreFantasyGrid() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

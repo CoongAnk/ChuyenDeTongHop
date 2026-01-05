@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 import "../styles/SearchPage.css";
 
 const SEARCH_RESULTS = [
@@ -91,6 +92,7 @@ export default function SearchPage() {
           </div>
         </aside>
       </div>
+      <Footer />
     </div>
   );
 }
