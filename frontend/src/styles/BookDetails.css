@@ -9,20 +9,32 @@
   display: flex;
   gap: 40px;
   padding: 30px 20px;
-  /* Quan trọng: container phải có align-items: flex-start */
   align-items: flex-start; 
+  position: relative;
+
 }
 
-/* CỘT TRÁI - HIỆU ỨNG STICKY */
 .details-left-col {
-  width: 150px; /* Độ rộng ảnh bìa */
+  width: 150px;
+  height: auto;
   flex-shrink: 0;
+  z-index: 10;
+
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 100px;
+  height: 500px;
 }
 
-.sticky-wrapper {
-  position: -webkit-sticky; /* Hỗ trợ Safari */
+.sticky-sidebar {
+  position: -webkit-sticky;
   position: sticky;
-  top: 80px; /* Khoảng cách từ đỉnh trang xuống (sau khi trừ đi chiều cao Header) */
+  top: 100px;
+  align-self: flex-start;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-book-cover {
@@ -56,7 +68,6 @@
   margin-top: 5px;
 }
 
-/* CỘT PHẢI - NỘI DUNG CHI TIẾT */
 .details-right-col {
   flex: 1;
 }
@@ -111,12 +122,30 @@
   gap: 10px;
 }
 
-.meta-label { font-weight: 800; width: 80px; color: #767676; font-size: 13px; }
-.meta-value { color: #333; font-size: 13px; }
+.meta-label { 
+  font-weight: 800; 
+  width: 80px; 
+  color: #767676; 
+  font-size: 13px; 
+}
 
-.section-divider { border: 0; border-top: 1px solid #ebebeb; margin: 40px 0; }
+.meta-value { 
+  color: #333; 
+  font-size: 13px; 
+}
 
-.sub-header { font-size: 13px; font-weight: 800; color: #382110; margin-bottom: 20px; }
+.section-divider { 
+  border: 0; 
+  border-top: 1px solid #ebebeb; 
+  margin: 40px 0; 
+}
+
+.sub-header { 
+  font-size: 13px; 
+  font-weight: 800; 
+  color: #382110; 
+  margin-bottom: 20px; 
+}
 
 .book-details-table {
   margin-top: 20px;
@@ -134,7 +163,7 @@
 }
 
 .detail-label {
-  width: 120px; /* Độ rộng cố định để nhãn thẳng hàng */
+  width: 120px;
   color: #767676;
   flex-shrink: 0;
 }
@@ -143,7 +172,6 @@
   color: #333;
 }
 
-/* PHẦN GENRES */
 .book-genres-row {
   margin-top: 20px;
   display: flex;
@@ -164,7 +192,6 @@
   text-decoration: underline;
 }
 
-/* Tinh chỉnh lại phần mô tả cho thoáng */
 .description-text {
   margin-bottom: 20px;
   font-family: "Merriweather", serif;
@@ -172,7 +199,6 @@
   color: #181818;
 }
 
-/* SECTION TÁC GIẢ */
 .about-author-section {
   padding: 20px 0;
 }
@@ -187,7 +213,7 @@
 .author-large-avatar {
   width: 80px;
   height: 80px;
-  border-radius: 50%; /* Ảnh tròn */
+  border-radius: 50%;
   object-fit: cover;
   border: 1px solid #eee;
   flex-shrink: 0;
@@ -239,14 +265,12 @@
   margin-top: 5px;
 }
 
-/* Đảm bảo divider mờ và mảnh */
 .section-divider {
   border: 0;
   border-top: 1px solid #ebebeb;
   margin: 30px 0;
 }
 
-/* RATINGS & REVIEWS SECTION */
 .ratings-reviews-section {
   padding: 10px 0;
 }
@@ -279,7 +303,6 @@
   color: #767676;
 }
 
-/* THANH BIỂU ĐỒ (BARS) */
 .rating-bars-list {
   flex: 1;
 }
@@ -308,7 +331,7 @@
 
 .bar-fill-orange {
   height: 100%;
-  background-color: #f15b5b; /* Màu cam đỏ đặc trưng của Goodreads */
+  background-color: #f15b5b;
 }
 
 .bar-count {
@@ -317,7 +340,6 @@
   width: 70px;
 }
 
-/* PHẦN USER WRITE REVIEW */
 .my-review-status {
   display: flex;
   gap: 20px;
@@ -361,7 +383,6 @@
   background-color: #368559;
 }
 
-/* REVIEWS */
 .review-item {
   padding: 20px 0;
   border-bottom: 1px solid #f2f2f2;

@@ -368,8 +368,17 @@
   box-shadow: 1px 1px 4px rgba(0,0,0,0.1);
 }
 
-.rec-book-name { font-weight: 800; font-size: 13px; color: #333; }
-.rec-author { font-size: 11px; color: #777; margin-bottom: 5px; }
+.rec-book-name { 
+  font-weight: 800; 
+  font-size: 13px; 
+  color: #333; 
+}
+
+.rec-author { 
+  font-size: 11px; 
+  color: #777; 
+  margin-bottom: 5px; 
+}
 
 .btn-wtr-small {
   background-color: #5c4722;

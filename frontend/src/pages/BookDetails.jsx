@@ -11,7 +11,6 @@ export default function BookDetails() {
       <Header />
       
       <div className="details-container">
-        {/* CỘT TRÁI: FIXED SIDEBAR */}
         <aside className="details-left-col">
           <div className="sticky-sidebar">
             <img 
@@ -29,7 +28,6 @@ export default function BookDetails() {
           </div>
         </aside>
 
-        {/* --- CỘT PHẢI: CUỘN TỰ DO (SCROLLABLE) --- */}
         <main className="details-right-col">
           <section className="main-book-header">
             <h1 className="book-title-display">Dan Heng - Imbibitor Lunae</h1>
@@ -60,7 +58,7 @@ export default function BookDetails() {
               <br /><br />
               In all his dreams, he was a dragon, a hero, a villain, but never someone who experienced love, hate, joy, or sorrow like them.
             </p>
-            {/* PHẦN THÔNG TIN CHI TIẾT MỚI THÊM */}
+            
             <div className="book-details-table">
               <div className="detail-row">
                 <span className="detail-label">Format</span>
@@ -164,7 +162,6 @@ export default function BookDetails() {
 
           <hr className="divider" />
 
-          {/* PHẦN BÌNH LUẬN (DÀI ĐỂ KIỂM TRA HIỆU ỨNG CUỘN) */}
           <section className="reviews-section">
             <h3 className="section-header">COMMUNITY REVIEWS</h3>
             {[1, 2, 3, 4, 5].map((i) => (

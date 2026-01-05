@@ -18,7 +18,6 @@ export default function SearchPage() {
         <main className="search-results-main">
           <h1 className="page-title">Search</h1>
 
-          {/* BẢNG LỌC PHÍA TRÊN (SEARCH BOX FILTER) */}
           <div className="search-filter-box">
             <div className="search-input-row">
               <input 
@@ -44,7 +43,6 @@ export default function SearchPage() {
             </div>
           </div>
 
-          {/* TAB ĐIỀU HƯỚNG PHỤ */}
           <div className="search-tabs">
             <span className="search-tab active">Books</span>
             <span className="search-tab">Groups</span>
@@ -78,7 +76,6 @@ export default function SearchPage() {
           </div>
         </main>
 
-        {/* CỘT PHẢI: RELATED SHELVES */}
         <aside className="search-sidebar">
           <div className="sidebar-widget">
             <h3 className="sidebar-title-black">RELATED SHELVES</h3>
