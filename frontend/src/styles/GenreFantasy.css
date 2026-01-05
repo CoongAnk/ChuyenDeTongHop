@@ -1,5 +1,5 @@
 .genre-grid-page {
-  background-color: #f4f1ea; /* Nền kem đồng bộ */
+  background-color: #f4f1ea;
   min-height: 100vh;
 }
 
@@ -28,12 +28,10 @@
   font-weight: 600;
 }
 
-/* THIẾT LẬP LƯỚI (GRID) */
 .book-only-grid {
   display: grid;
-  /* Chia làm 5 cột đều nhau, tự động co giãn */
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-  gap: 25px; /* Khoảng cách giữa các bìa */
+  gap: 25px;
 }
 
 .cover-wrapper {
@@ -42,30 +40,29 @@
   border-radius: 4px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
-  aspect-ratio: 2 / 3; /* Giữ tỉ lệ khung hình chuẩn của bìa sách */
-  background-color: #ddd; /* Màu nền chờ khi ảnh chưa tải xong */
+  aspect-ratio: 2 / 3;
+  background-color: #ddd;
 }
 
 .cover-wrapper:hover {
-  transform: translateY(-8px); /* Nhảy nhẹ lên khi hover */
+  transform: translateY(-8px);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .pure-cover-img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh lấp đầy khung hình */
+  object-fit: cover;
   display: block;
 }
 
-/* HIỆU ỨNG KHI RÊ CHUỘT */
 .cover-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.3); /* Làm tối ảnh một chút khi hover */
+  background: rgba(0, 0, 0, 0.3);
   display: flex;
   justify-content: center;
   align-items: center;

@@ -76,7 +76,7 @@ export default function Header() {
                       <li>Art</li>
                       <li>Comics</li>
                       <li>History</li>
-                      <li onClick={() => navigate("/genreFantasy")}>Fantasy</li>
+                      <li onClick={() => navigate("/genrefantasy")}>Fantasy</li>
                       <li className="view-all">More genres...</li>
                     </ul>
                   </div>
@@ -108,7 +108,7 @@ export default function Header() {
         <div className="header-center">
           <div className="search-wrapper">
             <input type="text" placeholder="Search books" className="header-search-input" />
-            <button className="search-icon-btn">🔍</button>
+            <button className="search-icon-btn" onClick={() => navigate("/searchpage")}>🔍</button>
           </div>
         </div>
 
